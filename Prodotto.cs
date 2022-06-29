@@ -9,70 +9,18 @@ namespace csharp_oop_shop
     internal class Prodotto
     {
         private int codeProduct = new Random().Next(1, 12345678);
-        private string nameProduct;
-        private string descriptionProduct;
-        private float priceProduct;
-        private int ivaProduct;
 
-        public int CodeProduct
-        {
-            get
-            {
-                return codeProduct;
-            }
+        public int CodeProduct {
+            get { return codeProduct; }
         }
-
-        public string NameProduct
-        {
-            get
-            {
-                return nameProduct;
-            }
-            set
-            {
-                nameProduct = value;
-            }
-        }
-
-        public string DescriptionProduct
-        {
-            get
-            {
-                return descriptionProduct;
-            }
-            set
-            {
-                descriptionProduct = value;
-            }
-        }
-
-        public float PriceProduct
-        {
-            get
-            {
-                return priceProduct;
-            }
-            set
-            {
-                priceProduct = value;
-            }
-        }
-
-        public int IvaProduct
-        {
-            get
-            {
-                return ivaProduct;
-            }
-            set
-            {
-                ivaProduct = value;
-            }
-        }
+        public string NameProduct { get; set; }
+        public string DescriptionProduct { get; set; }
+        public float PriceProduct { get; set; }
+        public int IvaProduct { get; set; }
 
         public float PriceWithIva()
         {
-            float price = (this.PriceProduct * (100 + this.ivaProduct)) / 100;
+            float price = (this.PriceProduct * (100 + this.IvaProduct)) / 100;
             return (float)Math.Round(price, 2);
         }
 
