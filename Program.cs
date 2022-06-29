@@ -10,13 +10,10 @@
 // alla creazione di un nuovo prodotto il codice sia valorizzato con un numero random
 // Il codice prodotto sia accessibile solo in lettura
 // Gli altri attributi siano accessibili sia in lettura che in scrittura
-
 // Il prodotto esponga sia un metodo per avere il prezzo base
 // che uno per avere il prezzo comprensivo di iva
-
 // Il prodotto esponga un metodo per avere il nome esteso,
 // ottenuto concatenando codice + nome
-
 // Nel vostro programma principale, testate tutte le funzionalità della classe Prodotto.
 
 // BONUS: create un metodo che restituisca il codice con un pad left di 0 per arrivare a
@@ -25,5 +22,8 @@
 using csharp_oop_shop;
 
 Prodotto prodotto1 = new Prodotto();
-
-Console.WriteLine(prodotto1.CodeProduct);
+prodotto1.NameProduct = "RayBan";
+prodotto1.DescriptionProduct = "Bellissimi occhiali da sole";
+prodotto1.PriceProduct = float.Parse("105,99");
+prodotto1.IvaProduct = int.Parse("22");
+prodotto1.PrintProduct();
