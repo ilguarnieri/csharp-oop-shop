@@ -8,8 +8,7 @@ namespace csharp_oop_shop
 {
     internal class Prodotto
     {
-        private int codeProduct = new Random().Next(0, 99999999);
-
+        private int codeProduct = new Random().Next(1, 12345678);
         private string nameProduct;
         private string descriptionProduct;
         private float priceProduct;
@@ -82,11 +81,28 @@ namespace csharp_oop_shop
             return $"{this.CodeProduct}{this.NameProduct}";
         }
 
+        public string getPadCode()
+        {
+
+            string strCode = this.CodeProduct.ToString();
+            int zeroAdd = 8 - strCode.Length;
+            string padCode = "";
+
+            for (int i = 0; i < zeroAdd; i++)
+            {
+                padCode += "0";
+            }
+
+            padCode += strCode;
+
+            return padCode;
+        }
+
         public void PrintProduct()
         {
             Console.WriteLine($"Articolo: {this.NameComplete()}");
             Console.WriteLine($"Nome prodotto: {this.NameProduct}");
-            Console.WriteLine($"Codice: {this.CodeProduct}");
+            Console.WriteLine($"Codice: {this.getPadCode()}");
             Console.WriteLine($"Descrizione: {this.DescriptionProduct}");
             Console.WriteLine($"IVA: {this.IvaProduct}");
             Console.WriteLine($"Prezzo senza IVA: {this.PriceProduct}");
