@@ -100,7 +100,7 @@ namespace csharp_oop_shop
 
         public void PrintProduct()
         {
-            Console.WriteLine($"Articolo: {this.NameComplete()}");
+            Console.WriteLine($"\nArticolo: {this.NameComplete()}");
             Console.WriteLine($"Nome prodotto: {this.NameProduct}");
             Console.WriteLine($"Codice: {this.getPadCode()}");
             Console.WriteLine($"Descrizione: {this.DescriptionProduct}");
