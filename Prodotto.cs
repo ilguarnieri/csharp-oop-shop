@@ -11,7 +11,7 @@ namespace csharp_oop_shop
         private int codeProduct = new Random().Next(1, 12345678);
 
         public int CodeProduct {
-            get { return codeProduct; }
+            get => this.codeProduct;
         }
         public string NameProduct { get; set; }
         public string DescriptionProduct { get; set; }
